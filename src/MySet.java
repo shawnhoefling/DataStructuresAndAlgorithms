@@ -45,24 +45,19 @@ public class MySet<T>{
     }
     // other methods
     public void add(T item){
-        // CODE HERE
         if (!membership(item)) { // if the item is not already in the list, then add it
             myList.add(item);
         }
     }
     public void remove(T item){
-        // CODE HERE
-        // if membership == true, call arraylist remove method 
-        if (membership(item)) {
+        if (membership(item)) { // if membership == true, call arraylist remove method 
             myList.remove(item);
         }
     }
     public Boolean membership(T item){
-        // CODE HERE
-        return myList.contains(item); // if the list contains the item return true, if not false.
+        return myList.contains(item); // if the list contains the item return true, if not false. uses contain from the arraylist methods
     }
     public String toString(){
-        // CODE HERE
         return myList.toString(); // returns a string with the list of elements.
     }
 }
