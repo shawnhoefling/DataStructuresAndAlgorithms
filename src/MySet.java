@@ -36,24 +36,33 @@ import java.util.*;
 
 public class MySet<T>{
     //data fields
-    private ArrayList<T> myList;
+    private ArrayList<T> myList; // declartaion of Arraylist myList
     
     // constructors
     MySet(){
-        // CODE HERE
+        this.myList = new ArrayList<T>(); // initialization of ArrayList myList
         
     }
     // other methods
     public void add(T item){
         // CODE HERE
+        if (!membership(item)) { // if the item is not already in the list, then add it
+            myList.add(item);
+        }
     }
     public void remove(T item){
         // CODE HERE
+        // if membership == true, call arraylist remove method 
+        if (membership(item)) {
+            myList.remove(item);
+        }
     }
     public Boolean membership(T item){
         // CODE HERE
+        return myList.contains(item); // if the list contains the item return true, if not false.
     }
     public String toString(){
         // CODE HERE
+        return myList.toString(); // returns a string with the list of elements.
     }
 }
