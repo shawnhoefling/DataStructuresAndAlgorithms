@@ -33,13 +33,34 @@ public class TestSet {
 
         System.out.println(setA.membership(userNumber)); // compares the user number with the set to see if what they entered is or is not in the set and returns true or false
 
-        input.close(); // clsoing scanner
+        input.close(); // closing scanner
 
-
-
-
-
+        // this section is the extra credit section of the testing
         
+/* 
+        // two new sets for testing union, intersection, and difference methods
+        MySet<Integer> setB = new MySet<>();
+        MySet<Integer> setC = new MySet<>();
+
+        System.out.println("Adding integers to set B: ");
+        setB.add(4);
+        setB.add(7);
+        setB.add(9);
+        setB.add(11);
+
+        System.out.println("Set B: " + setB.toString()); // displaying set Butilizing toString
+
+        System.out.println("Adding integers to set C: ");
+        setC.add(11);
+        setC.add(5);
+        setC.add(9);
+        setC.add(6);
+
+        System.out.println("Set C: " + setC.toString()); // displaying set C utilizing toString
+
+*/
+
+ 
 
         
     }
