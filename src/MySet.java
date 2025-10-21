@@ -98,7 +98,7 @@ public class MySet<T>{
     public String toString(){
         return myList.toString(); // returns a string with the list of elements.
     }
-
+}
 /* 
     // static methods for extra credit
     public static <T> MySet<T> union(MySet<T> SetB, MySet<T> SetC) { // if a = 12 and b = 23 then 1,2,3. maybe parameter is Set B and Set C comma in between or such
@@ -120,4 +120,4 @@ public class MySet<T>{
 
 */
 
-}
+
