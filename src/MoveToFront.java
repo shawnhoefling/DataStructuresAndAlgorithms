@@ -56,29 +56,36 @@ import java.util.*;
 
 public class MoveToFront<T>{
     //data fields
-    private ArrayList<T> myList; // declartaion of Arraylist myList
+    private LinkedList<T> myList; // declartaion of LinkedList called myList 
     
     // constructors
     MoveToFront(){
-        this.myList = new ArrayList<T>(); // initialization of ArrayList myList
-        
+        this.myList = new LinkedList<T>(); // initialization of LinkedList myList
     }
+
     // other methods
-    public void add(T item){
-        if (!membership(item)) { // if the item is not already in the list, then add it
-            myList.add(item);
+
+    public void push(T item){ // add item to list, if list contains item, pop it
+        if (!contains(item)) { // if the list does NOT contain item, push it
+            myList.push(item);
+        }
+        else {
+            myList.pop(); // this will pop or "remove" it from the list, if there are previous occurences 
         }
     }
-    public void remove(T item){
-        if (membership(item)) { // if membership == true, call arraylist remove method 
-            myList.remove(item);
+
+    public void pop(T item){ // removes last pushed item
+        if (myList.size() > 0) { // if the list is at the top, pop it
+            myList.pop();
         }
     }
-    public Boolean membership(T item){
-        return myList.contains(item); // if the list contains the item return true, if not false. uses contain from the arraylist methods
+
+    public Boolean contains(T item){ // if the list contains the integer, returns true, if not false.
+        return myList.contains(item); 
     }
-    public String toString(){
-        return myList.toString(); // returns a string with the list of elements.
+
+    public Boolean isEmpty(){ // checks if list is empty,or not
+        return myList.isEmpty();   
     }
 }
 
