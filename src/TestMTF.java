@@ -1,29 +1,28 @@
 import java.util.*;
 
-public class TestSet {
+public class TestMTF {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in); // scanner to take in user input for last step. 
 
-        MySet<Integer> setA = new MySet<>(); // using MySet object to create Set A
+        MoveToFront<Integer> setA = new MoveToFront<>(); // using MySet object to create Set A
+
+        // TODO: Completely redo and double check the test, it was carried over from last assignment so double check everything.
+    
 
         System.out.println("Adding integers to Set A:"); // hard coding the adding to set A with differing integers per instructions.
-        setA.add(2);
-        setA.add(5);
-        setA.add(7);
-        setA.add(2);
-        setA.add(4);
-        setA.add(2);
-        setA.add(2);
-        setA.add(9);
-        setA.add(8);
-        setA.add(11);
+
+        setA.push(7);
+        setA.push(4);
+        setA.push(9);
+        setA.push(11);
+        
 
         System.out.println("Set A: " + setA.toString()); // displaying using toString elements of the set that the user entered 
 
-        setA.remove(2);
-        setA.remove(9);
-        setA.remove(7);
+        setA.pop(4);
+        setA.pop(9);
+    
 
         System.out.println("Set A with removals: " + setA.toString()); // displaying the updated set with 2, 9, and 7 removed. 
 
@@ -31,7 +30,7 @@ public class TestSet {
         int userNumber = input.nextInt(); // takes in user input
 
 
-        System.out.println(setA.membership(userNumber)); // compares the user number with the set to see if what they entered is or is not in the set and returns true or false
+        System.out.println(setA.contains(userNumber)); // compares the user number with the set to see if what they entered is or is not in the set and returns true or false
 
         input.close(); // closing scanner
 

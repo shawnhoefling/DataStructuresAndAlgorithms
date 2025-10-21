@@ -75,8 +75,11 @@ public class MoveToFront<T>{
     }
 
     public void pop(T item){ // removes last pushed item
-        if (myList.size() > 0) { // if the list is at the top, pop it
-            myList.pop();
+        if (!myList.isEmpty()) { // if the list is not empty at the top, pop it
+            myList.pop(); // see about having a counter for the top of stack, or look into finding top of stack. maybe two stacks.
+        }
+        else {
+
         }
     }
 
@@ -87,5 +90,10 @@ public class MoveToFront<T>{
     public Boolean isEmpty(){ // checks if list is empty,or not
         return myList.isEmpty();   
     }
+
+     public String toString(){
+        return myList.toString(); // returns a string with the list of elements.
+    }
 }
 
+// rework pop, if myList.size() > 0 or just use
